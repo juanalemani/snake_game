@@ -5,17 +5,12 @@ screen.setup(width=600,height=600)
 screen.bgcolor('black')
 screen.title("My Snake game")
 
-segment_position = []
+segment_position = [(0,0),(-20,0),(-40,0)]
 
-segment_1 = turtle.Turtle(shape='square')
-segment_1.color('white')
-segment_1.goto(x=0,y=0)
-segment_2 = turtle.Turtle(shape='square')
-segment_2.color('white')
-segment_2.goto(x=-20,y=0)
-segment_3 = turtle.Turtle(shape='square')
-segment_3.color('white')
-segment_3.goto(x=-40,y=0)
+for position in segment_position:
+    new_segment = turtle.Turtle("square")
+    new_segment.color("white")
+    new_segment.goto(position)
 
 
 screen.exitonclick() 
